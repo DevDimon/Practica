@@ -90,16 +90,6 @@ void setZeroRightTop(int s, int n, double *m)
     }
 }
 
-// bool isValid(int n, double *m)
-// {
-//     return getValue(n - 1, n - 1, n, m) == 1.0;
-// }
-
-// bool isInfinity(int n, double *m)
-// {
-//     return std::round(getValue(n - 1, n, n, m)) == 0;
-// }
-
 int main(void)
 {
     int n, s, c;
