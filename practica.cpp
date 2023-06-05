@@ -90,6 +90,15 @@ void setZeroRightTop(int s, int n, double *m)
     }
 }
 
+bool isNull (float value)
+{
+    if (std::abs(value) < 0.0000001)
+    {
+        return true;
+    }
+    return false;
+}
+
 int main(void)
 {
     int n, s, c;
@@ -117,9 +126,9 @@ int main(void)
     {
         setLine(s, n, &matrix[0][0]);
 
-        if (std::round(getValue(s, s, n, &matrix[0][0])) == 0.0)
+        if (isNull(getValue(s, s, n, &matrix[0][0])))
         {
-            if (std::round(getValue(s, n, n, &matrix[0][0])) == 0)
+            if (isNull(getValue(s, n, n, &matrix[0][0])))
             {
                 cout << "Бесконечное количество решений";
             }
